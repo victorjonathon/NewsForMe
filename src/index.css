@@ -3,3 +3,22 @@
     flex-flow: row wrap;
     justify-content: center;
 }
+.dark-theme{
+    background-color: #3d3f4c;
+}
+.dark-theme .card{
+    background-color: #15172a;
+    border: 1px solid #ffffff;
+}
+
+.light-theme{
+    background-color: #ffffff;
+}
+.light-theme h1{
+    color:#222222;
+}
+.light-theme .card{
+    background-color: #ffffff;
+    border: 1px solid #15172a;
+    color: #222222;
+}
