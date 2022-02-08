@@ -6,7 +6,9 @@ import NewsItem from "./NewsItem";
 const News = (props) => {
     const [articles, setArticles] = useState([]);
     const {newsCategory, updateProgressBar} = props;
+    
     document.title = `NewsForMe - ${props.newsCategory.charAt(0).toUpperCase() + props.newsCategory.slice(1)}`;
+    
     useEffect(() => {
         axios
             .get(`https://newsapi.org/v2/top-headlines?category=${newsCategory}&from=2022-02-07&to=2022-02-07&sortBy=popularity&apiKey=${NEWS_API_KEY}`)
