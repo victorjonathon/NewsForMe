@@ -11,9 +11,22 @@ import {
 
 function App() {
   const [progress, setProgress] = useState(5);
+  const [theme, setTheme] = useState('dark');
 
   const updateProgressBar = (progress) => {
     setProgress(progress)
+  }
+
+  const toggleTheme = () => {
+      if(theme === 'dark'){
+          document.body.classList.remove('dark-theme');
+          document.body.classList.add('light-theme');
+          setTheme('light');
+      }else{
+          document.body.classList.remove('light-theme');
+          document.body.classList.add('dark-theme');
+          setTheme('dark')
+      }
   }
 
   return (
@@ -25,7 +38,7 @@ function App() {
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
-        <Navbar />
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
           <Routes>
             <Route path="/" element={<News newsCategory="general" updateProgressBar={updateProgressBar} />} />
             <Route path="/sports" element={<News newsCategory='sports' updateProgressBar={updateProgressBar} />} />
@@ -34,7 +47,7 @@ function App() {
             <Route path="/technology" element={<News newsCategory='technology' updateProgressBar={updateProgressBar} />} />
             <Route path="/entertainment" element={<News newsCategory='entertainment' updateProgressBar={updateProgressBar} />} />
           </Routes>
-        <Footer />
+        <Footer theme={theme} />
       </Router>
     </>
   );

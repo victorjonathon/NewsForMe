@@ -1,6 +1,6 @@
-const Footer = () => {
+const Footer = (props) => {
     return(
-        <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 px-3 bg-dark">
+        <footer className={`d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 px-3 ${props.theme === 'dark' ? 'bg-dark' : 'bg-light' }`}>
             <p className="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
 
             <ul className="nav col-md-4 justify-content-end">
