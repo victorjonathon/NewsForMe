@@ -40,12 +40,12 @@ function App() {
       />
         <Navbar theme={theme} toggleTheme={toggleTheme} />
           <Routes>
-            <Route path="/" element={<News newsCategory="general" updateProgressBar={updateProgressBar} />} />
-            <Route path="/sports" element={<News newsCategory='sports' updateProgressBar={updateProgressBar} />} />
-            <Route path="/health" element={<News newsCategory="health" updateProgressBar={updateProgressBar} />} />
-            <Route path="/business" element={<News newsCategory='business' updateProgressBar={updateProgressBar} />} />
-            <Route path="/technology" element={<News newsCategory='technology' updateProgressBar={updateProgressBar} />} />
-            <Route path="/entertainment" element={<News newsCategory='entertainment' updateProgressBar={updateProgressBar} />} />
+            <Route path="/" element={<News newsCategory="general" updateProgressBar={updateProgressBar} pageSize = {6} />} />
+            <Route path="/sports" element={<News newsCategory='sports' updateProgressBar={updateProgressBar} pageSize = {6} />} />
+            <Route path="/health" element={<News newsCategory="health" updateProgressBar={updateProgressBar} pageSize = {6} />} />
+            <Route path="/business" element={<News newsCategory='business' updateProgressBar={updateProgressBar} pageSize = {6} />} />
+            <Route path="/technology" element={<News newsCategory='technology' updateProgressBar={updateProgressBar} pageSize = {6} />} />
+            <Route path="/entertainment" element={<News newsCategory='entertainment' updateProgressBar={updateProgressBar} pageSize = {6} />} />
           </Routes>
         <Footer theme={theme} />
       </Router>
